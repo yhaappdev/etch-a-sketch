@@ -40,6 +40,7 @@ function clearGrid(event){
 function onClick(event){
     var value = prompt("Enter Grid Format");
     var sizeValue = parseInt(value);
+    if(sizeValue > 100) return alert("Enter value between 1 and 100");
     console.log(sizeValue * sizeValue);
     setCurrentSize(sizeValue);
     reloadGrid();
