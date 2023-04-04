@@ -25,7 +25,9 @@ function generateGrid(size){
 //event delegation
 function toggleTrail(event){
     if( !event.target.matches('.grid-item')) return;
-    event.target.classList.add('my-color-class');
+    //event.target.classList.add('my-color-class');
+    event.target.style.background = getRandomRgb();
+    console.log(getRandomRgb());
 }
 
 function reloadGrid(){
@@ -41,9 +43,18 @@ function onClick(event){
     var value = prompt("Enter Grid Format");
     var sizeValue = parseInt(value);
     if(sizeValue > 100) return alert("Enter value between 1 and 100");
-    console.log(sizeValue * sizeValue);
     setCurrentSize(sizeValue);
     reloadGrid();
+}
+
+function getRandomRgb() {
+    var num = Math.round(0xffffff * Math.random());
+    var r = num >> 16;
+    var g = num >> 8 & 255;
+    var b = num & 255;
+    var a = 1;
+    return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + a + ')';
+
 }
 
 window.onload = () => {
