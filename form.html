@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/selectors.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://httpbin.org/post" method="post">
+        <fieldset>
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" placeholder="Billy" name="first_name">
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" placeholder="Mitchell" name="last_name">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="20" name="age">
+
+            <label for="user_email">Email:</label>
+            <input type="email" id="user_email" name="email" placeholder="email@email.com">
+        
+            
+            <label for="user_password">Password:</label>
+            <input type="password" id="user_password" name="password" minlength="5" maxlength="20">
+        </div>
+        <div>
+            <input type="text" id="postal_code" name="postal_code" pattern="(\d{3}([\-]\d{3})?)" 
+                title="Please enter a valid postal code, example: 612-344" placeholder="612-344" required>
+        </div>
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+        <div>
+            <textarea>Some stuff</textarea>
+        </div>
+        <div>
+            <select name="Car">
+                <optgroup label="ICE">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="lexus">Lexus</option>
+                    <option value="bmw">BMW</option>
+                    <option value="honda">Honda</option>
+                    <option value="toyota">Toyota</option>
+                </optgroup>
+                <optgroup label="EV">
+                    <option value="tesla" selected>Tesla</option>
+                    <option value="kia">Kia</option>
+                </optgroup>
+            </select>
+        </div>
+        <div>
+            <input type="radio" id="adult" name="ticket_type" value="adult">
+            <label for="adult">Adult</label>
+        </div>
+        <div>
+            <label for="quantity">Quantity</label>
+        </div>
+        <input type="number" id="quantity" name="quantity" max="5" value="0">
+        <div>
+            <input type="radio" id="child" name="ticket_type" value="child">
+            <label for="child">Child</label>
+        </div>
+        
+        </fieldset>
+        <li class="button">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </li>
+        
+    </form>
+    <div class="container">
+        <button class="theme-toggle">Toggle <span class='theme-name'>dark</span> Theme</button>
+      </div>    
+      <script type="text/javascript" src="script/darkmode.js"></script>
+</body>
+</html>

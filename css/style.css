@@ -3,6 +3,10 @@
     --grid-rows: 1;
 }
 
+table, td, tr{
+    border: 2px solid black;
+}
+
 #div-grid-container{
     display: grid;
     grid-gap: 1em;

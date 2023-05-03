@@ -1,0 +1,112 @@
+  :root.dark {
+    --border-btn: 1px solid rgb(220, 220, 220);
+    --color-base-bg: rgb(18, 18, 18);
+    --color-base-text: rgb(240, 240, 240);
+    --color-btn-bg: rgb(36, 36, 36);
+  }
+  
+  :root.light {
+    --border-btn: 1px solid rgb(36, 36, 36);
+    --color-base-bg: rgb(240, 240, 240);
+    --color-base-text: rgb(18, 18, 18);
+    --color-btn-bg: rgb(220, 220, 220);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --border-btn: 1px solid rgb(220, 220, 220);
+      --color-base-bg: rgb(18, 18, 18);
+      --color-base-text: rgb(240, 240, 240);
+      --color-btn-bg: rgb(36, 36, 36);
+      --theme-name: "dark";
+    }
+  }
+  
+  body,
+  .theme-toggle {
+    color: var(--color-base-text);
+  }
+  
+  body {
+    background-color: var(--color-base-bg);
+    padding: 10px;
+  }
+
+  form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  form li + li{
+    margin-top: 1em;
+  }
+
+  label {
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+  }
+
+  input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #000;
+  }
+
+  input:invalid {
+    border-color: red;
+  }
+
+  input:valid {
+    border-color: green;
+  }
+
+  textarea {
+    vertical-align: top;
+    height: 5em;
+    margin-top: 10px;
+  }
+
+  .button {
+    padding-left: 90px;
+  }
+
+  button {
+    margin-left: 0.5em;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .theme-toggle {
+    background-color: var(--color-btn-bg);
+    border: var(--border-btn);
+    font-size: 1.125rem;
+    padding: 10px 20px;
+  }
+  
+  .theme-toggle:hover {
+    cursor: pointer;
+  }
+  
+  .theme-toggle:focus {
+    outline: var(--border-btn);
+  }
